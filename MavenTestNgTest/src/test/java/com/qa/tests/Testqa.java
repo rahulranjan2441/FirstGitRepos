@@ -20,6 +20,10 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Testqa 
 {
+	public static void testMethodr() 
+	{
+		
+	}
 	WebDriver driver;
 	@Test
 	public void openFlipkart() 
