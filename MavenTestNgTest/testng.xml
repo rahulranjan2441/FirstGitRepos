@@ -5,9 +5,10 @@
     <classes>
       <class name="com.qa.tests.Testqa">
       		<methods>
-	      		<include name="ClickSignIn"></include>
+	      		<include name="ixigoTicketBookingTest"></include>
 	      	</methods>
       </class>
+      
     </classes>
   </test> <!-- Test1 -->
 </suite> <!-- Suite1 -->

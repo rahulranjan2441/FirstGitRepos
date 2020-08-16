@@ -5,7 +5,10 @@
     <classes>
       <class name="com.qa.tests.Testqa">
         <methods>
-          <include name="ClickSignIn"/>
+          <include name="startReport"/>
+          <include name="getResult"/>
+          <include name="EndReport"/>
+          <include name="ixigoTicketBookingTest"/>
         </methods>
       </class> <!-- com.qa.tests.Testqa -->
     </classes>
