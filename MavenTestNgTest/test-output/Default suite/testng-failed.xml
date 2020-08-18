@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.Testqa">
+      <class name="com.qa.tests.ExecutableClass_Testqa">
         <methods>
-          <include name="startReport"/>
-          <include name="getResult"/>
-          <include name="EndReport"/>
           <include name="ixigoTicketBookingTest"/>
+          <include name="BrowserSetup"/>
+          <include name="endBrowserSetup"/>
         </methods>
-      </class> <!-- com.qa.tests.Testqa -->
+      </class> <!-- com.qa.tests.ExecutableClass_Testqa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
