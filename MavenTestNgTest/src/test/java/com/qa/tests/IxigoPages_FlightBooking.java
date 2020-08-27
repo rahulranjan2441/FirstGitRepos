@@ -59,34 +59,27 @@ public class IxigoPages_FlightBooking
 					
 			//5.2. 1 Stop
 			oneStopButton_click.click();
-			Thread.sleep(3000);
 			String AttrValue2 = oneStopAttributeValue2.getText();
 			System.out.println("1 stop - filter validation: "+AttrValue2);
 			Assert.assertTrue(AttrValue2.contains("1 stop"), "1 stop - filter not matched");
 			oneStopButton_click.click();
-			Thread.sleep(2000);
 			
 			//5.3. 1+ Stops
 			multiStopsCB_click.click();
-			Thread.sleep(3000);
 			String AttrValue3 = muultiStopsAttributeValue3.getText();
 			System.out.println("1+ stops - filter validation: "+AttrValue3);
 			Assert.assertTrue(AttrValue3.contains("stops"), "1+ stops - filter not matched");
 			multiStopsCB_click.click();
-			Thread.sleep(2000);
 			
 			//5.1. Non Stop
 			nonStopCB_Click.click();
-			Thread.sleep(2000);
 			String AttrValue = nonStopAttributeValue1.getText();
 			System.out.println("non-stop - filter validation: "+AttrValue);
 			Assert.assertTrue(AttrValue.contains("non-stop"), "non-stop - filter not matched");
 			//nonStopCB_Click.click();
-			Thread.sleep(2000);
 			
 			//departureTime slots
 			DepartureTimeSlot_click.click();
-			Thread.sleep(2000);
 			String departureTime = flightDepartureTime_AttributeValue1.getText();
 			String[] Time01 = departureTime.split(":");
 			int DeptTimeComp01 = Integer.parseInt(Time01[0]);
@@ -99,15 +92,12 @@ public class IxigoPages_FlightBooking
 				System.out.println("flight departure time is as expected: FAIL");
 			}
 			DepartureTimeSlot_click.click();
-			Thread.sleep(2000);
 			
 			//Airlines
 			selectAirlines_Click.click();
 			String AirlineName = AirlinesName_AttributeValue1.getText();
 			Assert.assertTrue(AirlineName.contains("IndiGo"));
-			Thread.sleep(2000);
 			selectAirlines_Click.click();
-			Thread.sleep(2000);
 			
 			//Reset Filters:
 			//driver.findElement(By.xpath("//div[@class='rst-fltrs u-link']")).click();
@@ -124,14 +114,12 @@ public class IxigoPages_FlightBooking
 				String flightFareValue = driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/div[1]/div/div[4]/div[1]/div/div["+i+"]/div[1]/div[5]/div/div/span[2]")).getText();
 				System.out.println("available flight's fare value: "+flightFareValue);
 				int flightFareInt = Integer.parseInt(flightFareValue);
-				Thread.sleep(2000);
 				if(flightFareInt<5000)
 				{
 					//get available flight's number
 					String FlightName = driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/div[1]/div/div[4]/div[1]/div/div["+i+"]/div[1]/div[3]/div[4]/div")).getText();
 					//String[] flightNumber = FlightName.split(" ");
 					System.out.println("flight number is: "+FlightName);
-					Thread.sleep(2000);
 					
 					//flight departure time
 					String FlightdepartureTime = driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/div[1]/div/div[4]/div[1]/div/div["+i+"]/div[1]/div[3]/div[1]")).getText();

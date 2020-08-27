@@ -50,33 +50,25 @@ public class IxigoPages_Homepage
 			
 			//3.	Enter From – Pune , To – Hyderabad
 			//select from/source city
-			Thread.sleep(2000);
 			SourceCity.click();
 			SourceCity.sendKeys(Keys.CONTROL , "a");
 			SourceCity.sendKeys(Keys.BACK_SPACE);
-			Thread.sleep(2000);
 			SourceCity.sendKeys(FromCity);
-			Thread.sleep(2000);
 			SourceCity.sendKeys(Keys.ENTER);
 			
 			// select To/Destination city
-			Thread.sleep(2000);
 			DestinationCity.click();
 			DestinationCity.sendKeys(Keys.CONTROL , "a");
 			DestinationCity.sendKeys(Keys.BACK_SPACE);
-			Thread.sleep(2000);
 			DestinationCity.sendKeys(ToCity);
-			Thread.sleep(2000);
 			DestinationCity.sendKeys(Keys.ENTER);
 			
 			//select Departure – 17 Sep 2020 / 17 Sep, Thu
 			departureDate.click();
-			Thread.sleep(2000);
 			
 			//select Return – 24 Oct 2020
 			returnDateCalendar.click();
 			returnDate.click();
-			Thread.sleep(2000);
 			
 			//enter Travelers - 2
 			ClickOnTravellerCounts.click();
