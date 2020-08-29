@@ -15,7 +15,8 @@ public class ExecutableClass_Testqa
 	@BeforeTest
 	public void BrowserSetup()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rahul\\Downloads\\softwares\\Selenium-Java\\chromedriver_win32\\chromedriver.exe");
+		System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\java\\com\\qa\\tests\\TestDataFolder\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
